@@ -1,25 +1,19 @@
-import React from 'react';
+import React, {StrictMode} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import { ThemeProvider } from './components/themeContext';
-import Background from './components/background';
-import Toggle from './components/themeToggle';
+import { ThemeProvider } from './context/themeContext';
 import reportWebVitals from './reportWebVitals';
 
+// PAGES
+import App from './App';
+
+
 ReactDOM.render(
-  <React.StrictMode>
+  <StrictMode>
     <ThemeProvider>
-      <Background>
-        <main>
-          <div className="absolute right-0 top-0 mr-4 mt-4 md:mr-6 md:mt-6">
-            <Toggle />
-          </div>
-          <App />
-        </main>
-      </Background>
+      <App/>
     </ThemeProvider>
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById('root')
 );
 

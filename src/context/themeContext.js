@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const getInitialTheme = () => {
     if (typeof window !== 'undefined' && window.localStorage) {
@@ -36,7 +36,7 @@ export const ThemeProvider = ({ initialTheme, children }) => {
         rawSetTheme(initialTheme);
     }
 
-    React.useEffect(() => {
+    useEffect(() => {
         rawSetTheme(theme);
     }, [theme]);
 
