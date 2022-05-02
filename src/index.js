@@ -7,7 +7,6 @@ import reportWebVitals from './reportWebVitals';
 // PAGES
 import App from './App';
 
-
 ReactDOM.render(
   <StrictMode>
     <ThemeProvider>
